@@ -1,0 +1,38 @@
+{
+  "entities": [
+    {
+      "name": "clintescontas",
+      "localizedName": "Clientes",
+      "proprieties": [
+        {
+          "name": "Name",
+          "localizedName": "Name",
+          "Type": "TextBox"
+        },
+        {
+          "name": "Country",
+          "localizedName": "Country",
+          "Type": "TextBox"
+        }
+      ]
+
+    },
+    {
+      "name": "produtos",
+      "localizedName": "Produtos",
+      "proprieties": [
+        {
+          "name": "Name",
+          "localizedName": "Name",
+          "Type": "TextBox"
+        },
+        {
+          "name": "Valor",
+          "localizedName": "Valor",
+          "Type": "TextBox"
+        }
+      ]
+
+    }
+  ]
+}

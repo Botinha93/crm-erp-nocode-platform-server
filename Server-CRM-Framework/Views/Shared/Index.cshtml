@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="top-bar"></div>
+<div id="app-container" class="fleRow">
+    <div id="side-menu-container"><div id="side-menu-header" onclick="sidemenuheaderClick(event)"><img src="images/menu-1.png" /><h3 style=" flex-grow: 1; margin-top: 10px;">Menu</h3></div><ul id="side-menu"></ul></div>
+    <div id="app-container" class="flexColumn">
+        <div id="nav-bar"><ul id="nav-bar-menu"></ul><div id="nav-bar-dropmenu-buttom">... <ul id="nav-bar-dropmenu"></ul></div></div>
+        <div id="div-content"></div>
+    </div>
+</div>
+<script type="module">
+    var sidemenuheaderStatus = true;
+    function sidemenuheaderClick(event) {
+        if (sidemenuheaderStatus)
+            document.getElementById('side-menu-container').style.width = '40px';
+        else
+            document.getElementById('side-menu-container').style.width = '';
+    }
+    import { loadingProcess } from './app-base/load.js'
+</script>

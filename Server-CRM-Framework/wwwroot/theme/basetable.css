@@ -1,0 +1,81 @@
+.content-main-table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.content-main-title {
+    margin-bottom: 15px;
+    align-content: center;
+    width: max-content;
+    flex-grow: 0;
+    align-content: center;
+    appearance: none;
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    border: 0;
+    font-size: 20px;
+    height: 60px;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+}
+.generic-table-search {
+    background-image: url('/images/searchicon.png');
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    font-size: 16px;
+    height: 18px;
+    padding: 12px 22px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 0.5%;
+    outline: none;
+    flex-grow: 0;
+    width: 200px;
+}
+  .generic-table-search:focus {
+    border: 1px solid #0078d4;
+    box-shadow:inset 0px 0px 0px 1px #0078d4;
+  }
+.generic-table {
+    width: 99%;
+    border-collapse: collapse;
+    margin-left: 0.5%;
+    margin-top: -10px;
+    font-size: 14px;
+    user-select: none;
+}
+  
+  .generic-table td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .generic-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .generic-table tbody tr:hover, .generic-table thead tr td:hover {
+    background-color: #f1f1f1;
+  }
+  .generic-table thead{
+    border-bottom: 2px solid #ddd;
+  }
+  .generic-table thead tr{
+    border: none;
+  }
+    .generic-table thead tr td {
+        text-align: left;
+        padding: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 18px;
+        color: var(--accentcolor);
+        box-shadow: 0px -0px 2px -0px black;
+    }
+.generic-table-selected {
+    background-color: rgba(var(--accentrgb),0.2) !important;
+}

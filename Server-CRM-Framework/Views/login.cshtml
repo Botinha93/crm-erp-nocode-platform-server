@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "login";
+}
+<script>
+    function buttonLogin(){
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', "loginProcess", true);
+                xhr.responseType = 'json';
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.setRequestHeader('user', document.getElementById('login-form-user').value);
+                xhr.setRequestHeader('pass', document.getElementById('login-form-pass').value);
+                xhr.onload = function() {
+                var status = xhr.status;
+                    if (status === 200) {
+                        if (xhr.response != "Invalid") {
+                            console.log(xhr);
+                            localStorage.setItem('token', xhr.response);
+                            window.location.replace("https://"+window.location.host);
+                        }
+                    } else if(status === 451){
+                        window.location.replace(xhr.getResponseHeader("location"));
+                    }else {
+                        console.log(status, xhr.response);
+                    }
+                };
+                xhr.send();
+            }
+    localStorage.clear();
+</script>
+<div id="login-form-bg">
+    <div id="login-form">
+        <div class="imgbg">
+            <img src="images/User-Login.png" />
+        </div>
+        <h2>ACCOUNT LOGIN</h2>
+        <div style="width: 280px;margin-left: -30px;">
+            <h1>User</h1>
+            <input type="text" autocomplete="username" id="login-form-user">
+            <h1>Password</h1>
+            <input type="password" autocomplete="current-password" id="login-form-pass">
+            <button onclick="buttonLogin()">Login</button>
+        </div>
+    </div>
+</div>
+
